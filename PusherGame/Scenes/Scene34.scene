@@ -7,6 +7,7 @@
   <key>Height</key>   <integer>960</integer>
   <key>Cols</key>     <integer>7</integer>
   <key>Rows</key>     <integer>7</integer>
+  <key>Lock</key>     <integer>1</integer>
   <key>ImgFill</key>  <string>Sky.jpg</string>
   <key>ImgFondo</key> <string>Scene34.jpg</string>
   <key>Grid</key>

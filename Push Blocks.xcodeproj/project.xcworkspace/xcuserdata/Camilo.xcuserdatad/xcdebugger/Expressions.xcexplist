@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[GlobalData LoadScenes]:GlobalData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "((DataScene *) LstScenes[0]).Puntos">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "ResultFrame.center">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DrawLineView setLen:]:DrawLineView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "(self.Tipo &amp; 0x8000)!=0">
+            </PersistentString>
+            <PersistentString
+               value = "[self IsHorz] ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GlobalData Save]:GlobalData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[GlobalData GetFondoScene:]:GlobalData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[Data objectForKey:@&quot;MainImgName&quot; ]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DataScene initWithCoder:]:GlobalData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "Path">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__50-[HelpController ResizeViewAnimL:View:Time:Delay:]_block_invoke:HelpController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "vw.IsHorz">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[GlobalData Default]:GlobalData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppData.Scenes[0].Fondo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PathData AddPnt:]:PathData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "Last.IsHorz">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PathData SetRefPnt:]:PathData.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[GlobalData initWithCoder:]:GlobalData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__27-[SocialData FecebookLogin]_block_invoke:SocialData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[error localizedDescription]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[StatisticalsController OnSortScores:]:StatisticalsController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AppData PuntosAt:j]&lt;=Pnts">
+            </PersistentString>
+            <PersistentString
+               value = "lstSorted[0]">
+            </PersistentString>
+            <PersistentString
+               value = "lstSorted[2]">
+            </PersistentString>
+            <PersistentString
+               value = "[AppData PuntosAt: ((NSNumber*)lstSorted[0]).intValue]">
+            </PersistentString>
+            <PersistentString
+               value = "j&lt;lstSorted.count">
+            </PersistentString>
+            <PersistentString
+               value = "lstSorted[1]">
+            </PersistentString>
+            <PersistentString
+               value = "[AppData PuntosAt:j]">
+            </PersistentString>
+            <PersistentString
+               value = "[AppData PuntosAt: ((NSNumber*)lstSorted[1]).intValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelectController viewDidLoad]:SelectController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LongScrollView DrawRoundRect:]:SelectController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "ColFoot">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DrawLineView drawRect:]:DrawLineView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[GlobalData encodeWithCoder:]:GlobalData.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

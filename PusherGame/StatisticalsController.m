@@ -27,6 +27,7 @@
 static UIImage  *StarOff;                  // Estrella apagada   para puntuación
 static UIImage  *StarOn;                   // Estrella encendida para puntuación
 
+
 //---------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se carga la vista por primera ves
 - (void)viewDidLoad

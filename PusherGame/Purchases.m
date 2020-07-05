@@ -10,11 +10,11 @@
 #import "Purchases.h"
 
 //=========================================================================================================================================
-#define PURSHASE_NOADS          @"com.BigXSoft.Soko.NoAds"
-#define PURSHASE_UNLOCK         @"com.BigXSoft.Soko.UnLock"
-#define PURSHASE_SOLUTION1      @"com.BigXSoft.Soko.Solution1"
-#define PURSHASE_SOLUTION2      @"com.BigXSoft.Soko.Solution2"
-#define PURSHASE_SOLUTION3      @"com.BigXSoft.Soko.Solution3"
+#define PURSHASE_NOADS          @"com.BigXSoft.PushBlocks.NoAds2"
+#define PURSHASE_UNLOCK         @"com.BigXSoft.PushBlocks.UnLock"
+#define PURSHASE_SOLUTION1      @"com.BigXSoft.PushBlocks.Solution1"
+#define PURSHASE_SOLUTION2      @"com.BigXSoft.PushBlocks.Solution2"
+#define PURSHASE_SOLUTION3      @"com.BigXSoft.PushBlocks.Solution3"
 //=========================================================================================================================================
 
 Purchases* AppPurchases;

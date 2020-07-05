@@ -33,8 +33,8 @@
 @implementation PurchaseController
 @synthesize Panel, btnRestore, lbTitle, LstPurchases, FlashItem;
 
-UIImage  *BuyOk;                    // Icono para los item que ya fueron comprados
-UIImage  *BuyItem;                  // Icono para los iconos que se pueden comprar
+static UIImage  *BuyOk;                    // Icono para los item que ya fueron comprados
+static UIImage  *BuyItem;                  // Icono para los iconos que se pueden comprar
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 - (id)initWithCoder:(NSCoder *)aDecoder

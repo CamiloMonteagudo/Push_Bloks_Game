@@ -39,19 +39,19 @@ SocialData* Social;
 #ifdef FREE_TO_PLAY
   #define GAME_URL             NSLocalizedString( @"GameUrlFree", nil )
   #define FB_APP_ID            @"359015990922881"
-  #define HIGHT_SCORE_ID       @"SokoLite.highscores"
-  #define ACHIEVEMENTS_05_ID   @"SokoLite.05milpoints"
-  #define ACHIEVEMENTS_10_ID   @"SokoLite.10milpoints"
-  #define ACHIEVEMENTS_20_ID   @"SokoLite.20milpoints"
-  #define ACHIEVEMENTS_30_ID   @"SokoLite.30milpoints"
+  #define HIGHT_SCORE_ID       @"PushLite.highscores"
+  #define ACHIEVEMENTS_05_ID   @"PushLite.05milpoints"
+  #define ACHIEVEMENTS_10_ID   @"PushLite.10milpoints"
+  #define ACHIEVEMENTS_20_ID   @"PushLite.20milpoints"
+  #define ACHIEVEMENTS_30_ID   @"PushLite.30milpoints"
 #else
   #define GAME_URL             NSLocalizedString( @"GameUrlFull", nil )
   #define FB_APP_ID            @"359015990922881"
-  #define HIGHT_SCORE_ID       @"SokoPlus.highscores"
-  #define ACHIEVEMENTS_05_ID   @"SokoPlus.05milpoints"
-  #define ACHIEVEMENTS_10_ID   @"SokoPlus.10milpoints"
-  #define ACHIEVEMENTS_20_ID   @"SokoPlus.20milpoints"
-  #define ACHIEVEMENTS_30_ID   @"SokoPlus.30milpoints"
+  #define HIGHT_SCORE_ID       @"PushBlocks_Highscores"
+  #define ACHIEVEMENTS_05_ID   @"PushBlocks.05milpoints"
+  #define ACHIEVEMENTS_10_ID   @"PushBlocks.10milpoints"
+  #define ACHIEVEMENTS_20_ID   @"PushBlocks.20milpoints"
+  #define ACHIEVEMENTS_30_ID   @"PushBlocks.30milpoints"
 #endif
 
 #define TWITTER_TXT NSLocalizedString( @"TwitterText", nil )

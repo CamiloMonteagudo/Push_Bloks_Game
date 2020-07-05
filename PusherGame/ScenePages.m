@@ -249,8 +249,8 @@ UIImage* Stars[6];
   
   NSString *sNum = [NSString stringWithFormat:@"%d", Num+1 ];                 // Convierte el número a cadena
   
-	UIFont *font = [UIFont boldSystemFontOfSize: w - (0.25 * w) ];              // Calcula el tamaño del Font
-	CGSize szStr = [sNum sizeWithFont:font];                                    // Obtiene tamaño del texto con el número
+  UIFont *font = [UIFont boldSystemFontOfSize: w - (0.25 * w) ];              // Calcula el tamaño del Font
+  CGSize szStr = [sNum sizeWithFont:font];                                    // Obtiene tamaño del texto con el número
   
   CGRect rc = CGRectMake(x,y,w,w);                                            // Crea el rectangulo donde lo va a dibujar
     

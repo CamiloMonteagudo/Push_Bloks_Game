@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment version="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +21,12 @@
                                 <rect key="frame" x="27" y="93" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="SUZ-67-IdU" userLabel="Fondo">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Welcome.jpg" id="SUZ-67-IdU" userLabel="Fondo">
                                         <rect key="frame" x="-32" y="-44" width="384" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="l6f-6r-vMK" userLabel="bntPlay">
-                                        <rect key="frame" x="116" y="128" width="88" height="58"/>
+                                        <rect key="frame" x="116" y="98" width="88" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -293,7 +293,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="416" y="116"/>
+            <point key="canvasLocation" x="472" y="116"/>
         </scene>
         <!--Play Game-->
         <scene sceneID="Lbp-eW-qUH">
@@ -658,7 +658,7 @@
                                         <rect key="frame" x="0.0" y="22" width="365" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a5w-Ra-QCd" id="xF8-9L-uwh">
-                                            <rect key="frame" x="0.0" y="0.0" width="332" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="332" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7PH-kk-fnR" userLabel="nScene">
@@ -1046,7 +1046,7 @@
                                                 <rect key="frame" x="0.0" y="1" width="310" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RnG-Jo-zFo" id="Fsi-8K-ez1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="59.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j7f-fp-axQ" userLabel="ItemDesc">
@@ -1070,7 +1070,7 @@
                                                         <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="4xV-cD-L38">
                                                             <rect key="frame" x="264" y="10" width="37" height="37"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                            <color key="color" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="color" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </activityIndicatorView>
                                                     </subviews>
                                                 </tableViewCellContentView>
@@ -1122,14 +1122,20 @@
         <image name="Sort.png" width="50" height="50"/>
         <image name="StarOff.png" width="50" height="50"/>
         <image name="Undo.png" width="50" height="50"/>
+        <image name="Welcome.jpg" width="384" height="568"/>
         <image name="ZoomIn.png" width="50" height="50"/>
         <image name="ZoomOut.png" width="50" height="50"/>
         <image name="iconClock.png" width="20" height="20"/>
         <image name="iconRule.png" width="20" height="20"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5vq-q3-OuD"/>
-        <segue reference="ZnV-ZF-kuA"/>
+        <segue reference="lm6-sh-05O"/>
+        <segue reference="RlI-87-2vX"/>
         <segue reference="Ulk-JA-i9v"/>
     </inferredMetricsTieBreakers>
 </document>
