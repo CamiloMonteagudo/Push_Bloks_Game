@@ -24,9 +24,8 @@
 @implementation StatisticalsController
 @synthesize pntsTotal, ToolBar, bntToolBar, LstScenes;
 
-UIImage  *StarOff;                  // Estrella apagada   para puntuación
-UIImage  *StarOn;                   // Estrella encendida para puntuación
-
+static UIImage  *StarOff;                  // Estrella apagada   para puntuación
+static UIImage  *StarOn;                   // Estrella encendida para puntuación
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se carga la vista por primera ves

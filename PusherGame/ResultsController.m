@@ -27,9 +27,9 @@
 @synthesize btnFace, btnGame;
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
-UIImage  *StarOff;                  // Estrella apagada   para puntuación
-UIImage  *StarOn;                   // Estrella encendida para puntuación
-CGPoint   StarPos;                  // Posición de todas las estrella al inicio
+static UIImage  *StarOff;                  // Estrella apagada   para puntuación
+static UIImage  *StarOn;                   // Estrella encendida para puntuación
+static CGPoint   StarPos;                  // Posición de todas las estrella al inicio
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se muestra la vista

@@ -27,7 +27,7 @@
   UIImage* imgScene = [UIImage imageWithContentsOfFile:pImg];               // Carga imagen desde fichero (Sin cache)
   if( imgScene != nil )                                                     // Si la pudo cargar
   
-    [imgScene drawInRect: [self GetImgRect:imgScene]];                      // La dibuja en la zona de juego
+  [imgScene drawInRect: [self GetImgRect:imgScene]];                        // La dibuja en la zona de juego
     
 //  else
 //    {

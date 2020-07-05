@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "GlobalData.h"
 #import "TouchView.h"
+#import <iAd/iAd.h>
 
 #ifdef FREE_TO_PLAY
-  @interface SceneController : UIViewController <ShowBannerView>
+  @interface SceneController : UIViewController <ADBannerViewDelegate>
 #else
   @interface SceneController : UIViewController
 #endif

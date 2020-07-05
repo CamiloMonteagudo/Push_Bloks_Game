@@ -233,7 +233,7 @@ Byte Cells[GRID_XSIZE][GRID_YSIZE];                                     // Matri
   
   NSDictionary *Data = [SceneData OpenSceneFile:fName ];                // Lee y parsea el fichero de la escena
   if(!Data )
-    return FALSE;                                              // Verifica si se pudo leer bien
+    return FALSE;                                                       // Verifica si se pudo leer bien
   
   Scene = [SceneData alloc];                                            // Crea objeto para datos de escena vacio
   if( ![Scene ReadData:Data] ) return FALSE;                            // Lee los datos basicos de la escena

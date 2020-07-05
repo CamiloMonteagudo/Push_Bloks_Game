@@ -5,27 +5,19 @@
 //  Created by Camilo Monteagudo on 18/05/14.
 //  Copyright (c) 2014 NiceGames. All rights reserved.
 //
+#ifdef DEBUG
 //#define SIMULATE_INTERNET    1
+#endif
 
 #import <Foundation/Foundation.h>
 #import "CronoTime.h"
 #import "ScenePages.h"
 
 //=========================================================================================================================================
-#ifdef FREE_TO_PLAY
-#import <iAd/iAd.h>
-
-@protocol ShowBannerView
-- (void) UpdateViewForBanner:(ADBannerView *)banner;
-@end
-
-#endif
-
-//=========================================================================================================================================
 // Maneja los datos globales de la aplicación, las escenas, las propagandas, las compras, etc.
-#ifdef FREE_TO_PLAY
-  @interface GlobalData : NSObject <NSCoding, ADBannerViewDelegate>
+@interface GlobalData : NSObject <NSCoding>
 
+#ifdef FREE_TO_PLAY
   @property (nonatomic) BOOL PurchaseNoAds;
   @property (nonatomic) BOOL PurchaseUnlock;
   @property (nonatomic) BOOL PurchaseSolLavel1;
@@ -37,8 +29,6 @@
   @property (nonatomic) BOOL ProcessSolLavel1;
   @property (nonatomic) BOOL ProcessSolLavel2;
   @property (nonatomic) BOOL ProcessSolLavel3;
-#else
-  @interface GlobalData : NSObject <NSCoding>
 #endif
 
   @property (nonatomic) int IdxScene;
@@ -68,11 +58,6 @@
 - (void) setNowPuntos:(int) puntos;
 - (long) getTotalPnts;
 - (NSString*) GetFullPath:(NSString*) fName;
-
-#ifdef FREE_TO_PLAY
-  @property (nonatomic) id<ShowBannerView> BannerNotify;
-  @property (nonatomic) ADBannerView*      BannerView;
-#endif
 
 @end
 

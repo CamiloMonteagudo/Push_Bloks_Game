@@ -20,6 +20,8 @@
 @interface SceneController ()
   {
   BOOL showBanner;
+  ADBannerView* BannerView;
+  
   int  LoadedScene;
   
 #ifdef SIMULATE_INTERNET
@@ -44,15 +46,16 @@
   if( SceneCrono == nil ) SceneCrono = [CronoTime alloc];
   
 #ifdef FREE_TO_PLAY
-  [self.view addSubview: AppData.BannerView];
-  AppData.BannerNotify = self;
+  BannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];           // Crea la vista para los anuncios
+  BannerView.delegate = self;                                          // Pone a esta clase como delegado
+  
+  [self.view addSubview: BannerView];
   
   GameZone.frame = CGRectInset( GameZone.frame, -25, 0 );
+  #ifdef SIMULATE_INTERNET
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(ShoHideBanner:) userInfo:nil repeats:YES];
+  #endif
   
-#ifdef SIMULATE_INTERNET
-  [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(ShoHideBanner:) userInfo:nil repeats:YES];
-#endif
-
 #endif
   
   [self ToolBarLayout];
@@ -77,7 +80,7 @@
 - (void)ShoHideBanner: (NSTimer *) timer
   {
   bannerLoaded = !bannerLoaded;
-  [self UpdateViewForBanner:AppData.BannerView];
+  [self bannerViewDidLoadAd:BannerView];
 	}
 #endif
 #endif
@@ -187,10 +190,7 @@
   {
   [SceneCrono Pause];
   
-#ifdef FREE_TO_PLAY
-  AppData.BannerNotify = nil;
   [super viewDidDisappear:animated];
-#endif
   
   [Sound StopBackground2];
   }
@@ -202,7 +202,7 @@
 #ifdef SIMULATE_INTERNET
   BOOL Loaded = bannerLoaded;
 #else
-  BOOL Loaded = AppData.BannerView.bannerLoaded;
+  BOOL Loaded = BannerView.bannerLoaded;
 #endif
 
   if( showBanner != Loaded && AppData.PurchaseNoAds==FALSE )
@@ -223,7 +223,7 @@
   CGFloat split = szView.height;
   
 #ifdef FREE_TO_PLAY
-  CGSize szBanner = AppData.BannerView.frame.size;
+  CGSize szBanner = BannerView.frame.size;
   if( showBanner ) split -= szBanner.height;
 #endif
   
@@ -239,7 +239,7 @@
                      GameZone.transform = CGAffineTransformMakeScale( Zoom, Zoom );
                      
 #ifdef FREE_TO_PLAY
-                     AppData.BannerView.frame = CGRectMake( 0, split, szView.width, szBanner.height );
+                     BannerView.frame = CGRectMake( 0, split, szView.width, szBanner.height );
 #endif
                    }];
   }
@@ -576,6 +576,50 @@
     [[segue destinationViewController] setFlashItem: lavel + 2 ];
     
   }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Llamada cuando el banner carga su primer anuncio desde internet
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+  {
+  [self UpdateViewForBanner:banner];
+  
+  NSLog(@"Banner bannerViewDidLoadAd");
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Llamada cuando se produce un error al obtener un anuncio
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+  {
+  [self  UpdateViewForBanner:banner];
+  
+  NSLog(@"Banner didFailToReceiveAdWithError");
+  }
+
+int SaveSound = -1;
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Llamada cuando el usuario expande el anuncio
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+  {
+  if( !willLeave )                                // Si la aplicacion no va a pasar a background
+    {
+    if( SceneCrono ) [SceneCrono Pause];          // Detiene el conteo de tiempo de la escena
+    
+    SaveSound = AppData.Sound;                    // Guarda el estado del sonido
+    [Sound SoundsOn: 0];                          // Apaga todos los sonido
+    }
+  
+  return TRUE;
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Llamada cuando el usuario termina de usar un anuncio expandido
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+  {
+  if( SceneCrono ) [SceneCrono Restore];        // Restaura el conteo de tiempo de la escena
+  [Sound SoundsOn: SaveSound];                  // Restaura el estado de los sonidos
+  }
+
 #endif
 
 //-----------------------------------------------------------------------------------------------------------------------------------------

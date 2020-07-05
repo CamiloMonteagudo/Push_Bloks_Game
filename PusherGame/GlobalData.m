@@ -40,8 +40,6 @@ CronoTime*  SceneCrono;              // Variable global, para controlar el tiemp
 #ifdef FREE_TO_PLAY
   @synthesize PurchaseNoAds, PurchaseUnlock, PurchaseSolLavel1, PurchaseSolLavel2, PurchaseSolLavel3;
   @synthesize ProcessNoAds, ProcessUnlock, ProcessSolLavel1, ProcessSolLavel2, ProcessSolLavel3;
-
-  @synthesize BannerView, BannerNotify;
 #endif
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -51,11 +49,6 @@ CronoTime*  SceneCrono;              // Variable global, para controlar el tiemp
   if( AppData == nil )                                                            // Si no se han cargado los datos de la aplicación
     AppData = [GlobalData Load];                                                  // Los carga
     
-#ifdef FREE_TO_PLAY
-  AppData.BannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];           // Crea la vista para los anuncios
-  AppData.BannerView.delegate = AppData;                                          // Pone a esta clase como delegado
-#endif
-  
   return AppData;
   }
 
@@ -309,54 +302,6 @@ CronoTime*  SceneCrono;              // Variable global, para controlar el tiemp
     
   return total;  
   }
-
-#ifdef FREE_TO_PLAY
-//---------------------------------------------------------------------------------------------------------------------------------------------
-// Llamada cuando el banner carga su primer anuncio desde internet
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-  {
-  if( BannerNotify != nil )
-    [BannerNotify UpdateViewForBanner:banner];
-  
-  // NSLog(@"Banner bannerViewDidLoadAd");
-  }
-
-//---------------------------------------------------------------------------------------------------------------------------------------------
-// Llamada cuando se produce un error al obtener un anuncio
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-  {
-  if( BannerNotify != nil )
-    [BannerNotify UpdateViewForBanner:banner];
-  
-  // NSLog(@"Banner didFailToReceiveAdWithError");
-  }
-
-int SaveSound = -1;
-
-//---------------------------------------------------------------------------------------------------------------------------------------------
-// Llamada cuando el usuario expande el anuncio
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-  {
-  if( !willLeave )                                // Si la aplicacion no va a pasar a background
-    {
-    if( SceneCrono ) [SceneCrono Pause];          // Detiene el conteo de tiempo de la escena
-  
-    SaveSound = AppData.Sound;                    // Guarda el estado del sonido
-    [Sound SoundsOn: 0];                          // Apaga todos los sonido
-    }
-    
-  return TRUE;
-  }
-
-//---------------------------------------------------------------------------------------------------------------------------------------------
-// Llamada cuando el usuario termina de usar un anuncio expandido
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-  {
-  if( SceneCrono ) [SceneCrono Restore];        // Restaura el conteo de tiempo de la escena
-  [Sound SoundsOn: SaveSound];                  // Restaura el estado de los sonidos
-  }
-
-#endif
 
 @end
 

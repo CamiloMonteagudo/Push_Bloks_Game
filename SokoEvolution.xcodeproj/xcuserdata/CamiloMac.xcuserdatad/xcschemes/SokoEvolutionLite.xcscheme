@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F0DBD16E19A803220035521F"
-               BuildableName = "SokoEvolutionLite.app"
+               BuildableName = "SokoEvolutionLiteT1.app"
                BlueprintName = "SokoEvolutionLite"
                ReferencedContainer = "container:SokoEvolution.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F0DBD16E19A803220035521F"
-            BuildableName = "SokoEvolutionLite.app"
+            BuildableName = "SokoEvolutionLiteT1.app"
             BlueprintName = "SokoEvolutionLite"
             ReferencedContainer = "container:SokoEvolution.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F0DBD16E19A803220035521F"
-            BuildableName = "SokoEvolutionLite.app"
+            BuildableName = "SokoEvolutionLiteT1.app"
             BlueprintName = "SokoEvolutionLite"
             ReferencedContainer = "container:SokoEvolution.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F0DBD16E19A803220035521F"
-            BuildableName = "SokoEvolutionLite.app"
+            BuildableName = "SokoEvolutionLiteT1.app"
             BlueprintName = "SokoEvolutionLite"
             ReferencedContainer = "container:SokoEvolution.xcodeproj">
          </BuildableReference>
