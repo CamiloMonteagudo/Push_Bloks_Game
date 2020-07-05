@@ -1,0 +1,42 @@
+// Url donde localizar la aplicacion según el idioma
+"GameUrlFree"    = "https://itunes.apple.com/es/app/id1068208356";
+"GameUrlFull"    = "https://itunes.apple.com/es/app/id957129990";
+
+// Cadena de los mensajes en las redes Sociales
+"TwitterText" = "¡Descarga el juego Sokoban Evolution de iOS game!";
+"FBDesc"      = "He alcanzado %d puntos en Smart Pusher.";
+"FBMsg"       = "¡Una nueva puntuación alta!";
+"FBCaption"   = "Juego Smart Pusher";
+"FBNoUser"    = "El usuario no ha iniciado sección";
+
+// Cadena usadas en las ventanas del programa
+"ScoreFrm"  = "Puntuación: %d puntos";
+"PointsFrm" = "%d puntos";
+"lbEnded"   = "Completado:";
+"lbMoved"   = "Movimintos:";
+"lbTimer"   = "Tiempo:";
+"lbTotal"   = "Total:";
+"lbWarn"    = "Advertencia";
+"lbNoSol"   = "La solución no tiene acceso hasta después de 10 minutos de juego";
+"lbClose"   = "OK";
+"lbClose_"  = "Cerrar";
+
+// Cadena usadas para la ayuda
+"PathTopic"     = "Definir un camino";
+"MoveTopic"     = "Comenzar movimiento";
+"ContTopic"     = "Continuar camino";
+"Targets1Topic" = "Objetivos simples";
+"Targets2Topic" = "Objetivo Múltiple";
+
+"TimeLabel1" = "tiempo > 1 seg.";
+"TimeLabel2" = "tiempo < 1 seg.";
+
+// Cadena usadas para las compras dentro de la aplicación
+"PurchaseTitle" = "Compras";
+"Restore"       = "Restaurar las compras";
+"ProdNoAds"     = "No mostrar anuncios";
+"ProdUnlock"    = "Desbloquear escenas";
+"ProdSol1"      = "Soluciones de escenas en el agua";
+"ProdSol2"      = "Soluciones de escenas en el aire";
+"ProdSol3"      = "Soluciones de escenas en el espacio";
+"NoInternet"    = "No se puede conectar a App Store";

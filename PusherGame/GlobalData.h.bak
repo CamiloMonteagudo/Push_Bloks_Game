@@ -1,0 +1,82 @@
+//
+//  GlobalData.h
+//  PusherGame
+//
+//  Created by Camilo Monteagudo on 18/05/14.
+//  Copyright (c) 2014 NiceGames. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "CronoTime.h"
+#import "ScenePages.h"
+
+//=========================================================================================================================================
+#ifdef FREE_TO_PLAY
+#import <iAd/iAd.h>
+
+@protocol ShowBannerView
+- (void) UpdateViewForBanner:(ADBannerView *)banner;
+@end
+
+#endif
+
+//=========================================================================================================================================
+// Maneja los datos globales de la aplicación, las escenas, las propagandas, las compras, etc.
+#ifdef FREE_TO_PLAY
+  @interface GlobalData : NSObject <NSCoding, ADBannerViewDelegate>
+
+  @property (nonatomic) BOOL PurchaseNoAds;
+  @property (nonatomic) BOOL PurchaseUnlock;
+  @property (nonatomic) BOOL PurchaseSolLavel1;
+  @property (nonatomic) BOOL PurchaseSolLavel2;
+  @property (nonatomic) BOOL PurchaseSolLavel3;
+
+  @property (nonatomic) BOOL ProcessNoAds;
+  @property (nonatomic) BOOL ProcessUnlock;
+  @property (nonatomic) BOOL ProcessSolLavel1;
+  @property (nonatomic) BOOL ProcessSolLavel2;
+  @property (nonatomic) BOOL ProcessSolLavel3;
+#else
+  @interface GlobalData : NSObject <NSCoding>
+#endif
+
+  @property (nonatomic) int IdxScene;
+  @property (nonatomic) int Zoom;
+  @property (nonatomic) int Sound;
+  @property (nonatomic) ScenePages* Pages;
+
++ (GlobalData *) Default;
+
+- (BOOL) Save;
+
+- (int) nScenes;
+
+- (NSString*) NowPath;
+- (NSString*) NowFondo;
+- (int)       NowPuntos;
+
+- (NSString*) PathAt:(int) idx;
+- (NSString*) FondoAt:(int) idx;
+- (int)       PuntosAt:(int) idx;
+- (int)       StarsAt:(int) idx;
+- (int)       GetStars:(int) puntos;
+
+- (BOOL) isLockAt:(int) idx;
+- (void) UnLockAll;
+
+- (void) setNowPuntos:(int) puntos;
+- (long) getTotalPnts;
+
+#ifdef FREE_TO_PLAY
+  @property (nonatomic) id<ShowBannerView> BannerNotify;
+  @property (nonatomic) ADBannerView*      BannerView;
+#endif
+
+@end
+
+//=========================================================================================================================================
+
+extern GlobalData* AppData;                 // Variable global, para tener acceso a los datos de la aplicación desde cualquier lugar
+extern CronoTime*  SceneCrono;              // Variable global, para controlar el tiempo de juego por escena
+
+//=========================================================================================================================================

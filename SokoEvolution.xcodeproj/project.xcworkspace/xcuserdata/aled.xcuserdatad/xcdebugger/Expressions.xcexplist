@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[Sound PlayBackground1]:Sound.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "Session.otherAudioPlaying">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainController SetSoundIcon]:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "AppData.Sonido">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SceneController viewDidLoad]:SceneController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelSceneController UpdateScrollContent]:SelSceneController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_Scroll.subviews.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelSceneController OnZoomOut:]:SelSceneController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "( nowZoom &lt; 2 )">
+            </PersistentString>
+            <PersistentString
+               value = "nowZoom &gt; 0 ">
+            </PersistentString>
+            <PersistentString
+               value = "bntZoomOut.enabled">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ScenePages DrawFoot:Context:]:ScenePages.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "62.5 * esc">
+            </PersistentString>
+            <PersistentString
+               value = "hFoot">
+            </PersistentString>
+            <PersistentString
+               value = "WIcon">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
